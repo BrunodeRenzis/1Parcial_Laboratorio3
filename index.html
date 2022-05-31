@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/app.js" type="module" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-dual-ring"></div>
+    </div>
+    <header>
+        <nav>
+            <img src="assets/carLogo.png" width="90" height="90" alt="logoAuto" class="autoLogo">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="anuncios.html">Anuncios</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2>Administracion</h2>
+    <div class="contenedorImagen">
+        <img src="assets/carAdministracion.png" alt="Imagen cars" class="imgAutos" srcset="">
+    </div>
+    <main>
+        <section class="form-anuncio">
+            <fieldset>Información del anuncio
+                <h2 id="alta-anuncio">Llena el formulario de Alta</h2>
+                <form>
+                    <label for="txtTitulo">TÍTULO</label><br>
+                    <input type="text" placeholder="Título" name="txtTitulo" required/><br>
+                        <div class="contenedorTransaccion">
+                            <legend>TRANSACCIÓN:</legend>
+                            <input type="radio" class="transaccionValue" name="rdoTransaccion" value="venta" checked/>Venta <br>
+                            <input type="radio" class="transaccionValue" name="rdoTransaccion" value="alquiler"/>Alquiler <br>
+                        </div>
+                        <label for="txtDescripcion">DESCRIPCIÓN:</label><br>
+                        <input type="text" placeholder="Descripcion" name="txtDescripcion" required/><br>
+                        <label for="txtPrecio">PRECIO:</label><br>
+                        <input type="number" placeholder="precio" name="txtPrecio" required/><br>
+                        <div class="contenedorDetalles">
+                            <label for="txtPuertas">Puertas:</label><br>
+                            <input type="number" placeholder="Puertas" name="txtPuertas" min="3" max="5" required/><br>
+                            <label for="txtKilometros">KM's:</label><br>
+                            <input type="number" placeholder="Kilometros" name="txtKilometros" min="0" max="200000" required/><br>
+                            <label for="txtPotencia">Potencia:</label><br>
+                            <input type="number" placeholder="Potencia" name="txtPotencia" required/><br>
+                        </div>
+                        <input id="btnAgregarEditar" type="submit" value="Agregar">
+                        <input id="btnCancelar" type="submit" value="Cancelar">
+                        <input id="btnEliminar" type="button" value="Eliminar">
+                        <input type="hidden" name="txtId">
+                    </form>
+            </fieldset>
+        </section>
+        <section class="lista-anuncio">
+            <h2 id="titulo-lista">Listado De anuncios</h2>
+            <div id="divTabla"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2022 Bruno de Renzis, todos los derechos reservados.</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+</html>

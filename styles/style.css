@@ -1,0 +1,176 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color: grey;
+}
+
+.centrado{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+}
+
+h2{
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+
+header{
+    height: 10vh;
+    margin-bottom: 2vh;
+    background-color: yellow;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-image: url('./assets/Steerwheel.gif');
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid black;
+    border-color: black transparent black transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.autoLogo{
+    display: block;
+    float: left;
+}
+
+footer{
+    height: 10vh;
+    background-color: yellow;
+
+}
+
+.contenedorTransaccion{
+    display: flex;
+    justify-content: space-around;
+    padding: 2vh 0;
+}
+
+.contenedorImagen{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.imgAutos{
+
+    margin: 0 auto;
+}
+
+ul{
+    display: flex;
+    justify-content:flex-end;
+    list-style: none;
+    
+}
+
+.hidden{
+    overflow: hidden;
+}
+
+header{
+    text-align: center;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid black;
+    border-color: black transparent black transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  main{
+      width:70%;
+      margin: 0 auto;
+  }
+
+th,td{
+    border: 1px solid black;
+}
+
+input{
+    min-width: 10vw;
+    min-height: 2vh;
+    margin: 1vh 0;
+    width: 100%;
+}
+
+.transaccionValue{
+    width: 0%;
+}
+
+#btnAgregarEditar, #btnEliminar, #btnCancelar{
+    width: 20%;
+    margin: 0 auto;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+label{
+    display: block;
+    float: left;
+}
+
+#btnEliminar{
+    display: none;
+    background-color: red;
+}
+
+#btnAgregarEditar{
+    background-color: aqua;
+}
+
+#btnCancelar{
+    background-color: yellow;
+}
+
+table:hover{
+    cursor: pointer;
+}
