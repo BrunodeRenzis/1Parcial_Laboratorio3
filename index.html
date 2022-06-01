@@ -45,14 +45,19 @@
                         <label for="txtPrecio">PRECIO:</label><br>
                         <input type="number" placeholder="precio" name="txtPrecio" required/><br>
                         <div class="contenedorDetalles">
-                            <label for="txtPuertas">Puertas:</label><br>
-                            <input type="number" placeholder="Puertas" name="txtPuertas" min="3" max="5" required/><br>
-                            <label for="txtKilometros">KM's:</label><br>
-                            <input type="number" placeholder="Kilometros" name="txtKilometros" min="0" max="200000" required/><br>
-                            <label for="txtPotencia">Potencia:</label><br>
-                            <input type="number" placeholder="Potencia" name="txtPotencia" required/><br>
+                            <div class="contenedorCaracteristicas">
+                                <img src="assets/puerta-del-auto.png" width="30" height="30"></img><input type="number" placeholder="Puertas" name="txtPuertas" min="3" max="5" required/><br>
+                            </div>
+                            <div class="contenedorCaracteristicas">
+                                <img src="assets/velocimetro.png" width="30" height="30"></img><input type="number" placeholder="Kilometros" name="txtKilometros" min="0" max="200000" required/><br>                                
+                            </div>
+                            <div class="contenedorCaracteristicas">
+                                <img src="assets/motor-del-coche.png" width="30" height="30"></img><input type="number" placeholder="Potencia" name="txtPotencia" required/><br>
+                            </div>
                         </div>
-                        <input id="btnAgregarEditar" type="submit" value="Agregar">
+                        <button id="btnAgregarEditar" type="submit">Guardar
+                            <img src="assets/guardar.png" width="10" height="10"></img>
+                        </button>
                         <input id="btnCancelar" type="submit" value="Cancelar">
                         <input id="btnEliminar" type="button" value="Eliminar">
                         <input type="hidden" name="txtId">

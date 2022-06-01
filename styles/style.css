@@ -1,3 +1,5 @@
+*{
+}
 body{
     margin:0;
     padding:0;
@@ -79,15 +81,22 @@ footer{
 }
 
 .imgAutos{
-
+    width: 50%;
     margin: 0 auto;
 }
 
 ul{
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     list-style: none;
-    
+    height: 10vh;
+    align-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+ul>li{
+    padding: 0 1vw;
 }
 
 .hidden{
@@ -96,6 +105,7 @@ ul{
 
 header{
     text-align: center;
+    width: 100%;
 }
 
 .lds-dual-ring {
@@ -173,4 +183,52 @@ label{
 
 table:hover{
     cursor: pointer;
+}
+
+.anuncios{
+    background-image: url('../assets/anunciosBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedorDetalles{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedorCaracteristicas{
+    display: inline-flex;
+    padding-bottom: 2vh;
+}
+
+
+.contenedorCaracteristicas>input{
+    width: 30%;
+}
+
+footer>p{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@media screen and (max-width:768px){
+    header>nav>ul>li{
+        display: none;
+    }
+
+    header>nav>ul::after{
+        background-image: url('../assets/lista.png');
+        background-repeat: no-repeat;
+        background-size: 30px 40px;
+        display: inline-block;
+        width: 40px; 
+        height: 40px;
+        content: '';
+        
+    }
 }
