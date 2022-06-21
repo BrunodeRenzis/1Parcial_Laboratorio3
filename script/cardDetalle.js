@@ -1,5 +1,6 @@
-import { armarAnuncios } from "./dinamicas.js";
-const anuncios = document.getElementsById('sectionArticulos')
-anuncios.forEach(element => {
-    document.getElementById("Container").appendChild(armarAnuncios(element.titulo,element.descripcion,element.precio,element.puertas,element.potencia,element.kms));
+import { crearCard } from "./dinamicas.js";
+const anuncios = localStorage.getItem("anuncios")?JSON.parse(localStorage.getItem("anuncios")):[];
+
+anuncios.forEach(anuncio => {
+    document.getElementById("sectionArticulos").appendChild(crearCard(anuncio.titulo,anuncio.descripcion,anuncio.precio,anuncio.puertas,anuncio.potencia,anuncio.kms,anuncio.valores));
 });
