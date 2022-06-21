@@ -38,12 +38,9 @@ const anunciosJSON = JSON.parse(localStorage.getItem("anuncios")) || [];
 
 actualizarStorage(anunciosJSON);
 
-console.log(anunciosJSON);
 window.addEventListener("click", (e) => {
   let id = e.target.parentElement.dataset.id;
   if (e.target.matches("tr,td")) {
-    console.log(e.target.textContent);
-    console.log(id);
     cargarFormulario(anunciosJSON.find((anuncio) => anuncio.id == id));
     $h2Alta.textContent = "Llena el formulario de modificación";
     $btnAgregarEditar.value = "Editar";
@@ -92,12 +89,10 @@ function cargarFormulario(anuncio) {
   txtPotencia.value = anuncio.potencia;
   rdoTransaccion.value = anuncio.transaccion;
   txtCaracteristicas.value = $cbAutomatica.checked;
-  console.log(anuncio);
 }
 
 $formulario.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("Enviando...");
   const valores = [];
   if($cbAutomatica.checked){
     valores.push('Caja automática');
